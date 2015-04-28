@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> <%=@animal.name%> - <%=@animal.species%>
+      <small><span class="glyphicon glyphicon-pencil"><%=link_to 'Edit', edit_animal_path%></span>
+      <span class="glyphicon glyphicon-remove"><%=link_to 'Delete', animal_path, method: :delete, data: { confirm: 'Are you sure?'} %></span>
+      </small></h1>
+      <h2> <%=@animal.desc%></h2>
+    </div>
+  </div>
+</div>

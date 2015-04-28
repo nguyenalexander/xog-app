@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Edit <%=@animal.name%>.</h1>
+      <%= bootstrap_form_for @animal do |a| %>
+      <%= a.text_field :name, :placeholder => 'Enter an animal'%>
+      <%= a.text_field :desc, :placeholder => 'Enter a description'%>
+      <%= a.text_field :species, :placeholder => 'Enter a species'%>
+      <%= a.primary %>
+      <% end %>
+    </div>
+  </div>
+</div>
