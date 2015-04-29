@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col-md-12">
       <h1> <%=@animal.name%> - <%=@animal.species%>
-      <small><span class="glyphicon glyphicon-pencil"><%=link_to 'Edit', edit_animal_path%></span>
-      <span class="glyphicon glyphicon-remove"><%=link_to 'Delete', animal_path, method: :delete, data: { confirm: 'Are you sure?'} %></span>
+      <small>
+      <%= link_to raw("<i class=\"glyphicon glyphicon-pencil\"></i>"), edit_animal_path(@animal), :class=> "btn btn-info"%>
+      <%= link_to raw("<i class=\"glyphicon glyphicon-trash\"></i>"), animal_path(@animal), :method => :delete, data:{confirm: "Are you sure?"}, :class=>"btn btn-danger" %>
       </small></h1>
       <h2> <%=@animal.desc%></h2>
     </div>

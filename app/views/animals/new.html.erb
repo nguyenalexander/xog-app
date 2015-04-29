@@ -3,11 +3,11 @@
     <div class="col-md-12">
       <h1>Post a new animal! What have you found under a log?</h1>
 
-      <%= bootstrap_form_for @animal do |a| %>
-      <%= a.text_field :name, :placeholder => 'Enter an animal'%>
-      <%= a.text_field :desc, :placeholder => 'Enter a description'%>
-      <%= a.text_field :species, :placeholder => 'Enter a species'%>
-      <%= a.primary %>
+      <%= bootstrap_form_for @animal do |f| %>
+      <%= f.text_field :name, :placeholder => 'Enter an animal'%>
+      <%= f.text_field :desc, :placeholder => 'Enter a description'%>
+      <%= f.text_field :species, :placeholder => 'Enter a species'%>
+      <%= f.primary %>
       <% end %>
     </div>
   </div>
