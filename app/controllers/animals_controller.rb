@@ -10,7 +10,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.create(animal_params)
-    redirect_to @animal
+    redirect_to :animals
   end
 
   def show
@@ -22,18 +22,16 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @animal = Animal.find(params[:id])
-    if @animal.update(animal_params)
-      redirect_to @animal
-    else render :edit
+  @animal = Animal.update(params[:id], animal_params)
+  redirect_to :animals
+    unless @animal
+      redirect_to :edit
     end
   end
 
   def destroy
-    @animal = Animal.find(params[:id])
-    @animal.destroy
-    p animals_path
-    redirect_to animals_path
+  @animal = Animal.destroy(params[:id])
+  redirect_to :animals
   end
 
   private
