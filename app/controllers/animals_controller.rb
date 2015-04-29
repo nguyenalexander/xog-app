@@ -25,7 +25,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     if @animal.update(animal_params)
       redirect_to @animal
-    else render 'edit'
+    else render :edit
     end
   end
 
