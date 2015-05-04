@@ -6,6 +6,7 @@
       <%= f.text_field :name, :placeholder => 'Enter an animal'%>
       <%= f.text_field :desc, :placeholder => 'Enter a description'%>
       <%= f.text_field :species, :placeholder => 'Enter a species'%>
+      <%= f.collection_check_boxes :tag_ids, @tags, :id, :name, label: 'Tags' %>
       <%= f.primary %>
       <% end %>
     </div>

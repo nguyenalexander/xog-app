@@ -1,12 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1> <%=@animal.name%> - <%=@animal.species%>
+      <h1> <%=@animal.name%>
       <small>
       <%= link_to raw("<i class=\"glyphicon glyphicon-pencil\"></i>"), edit_animal_path(@animal), :class=> "btn btn-info"%>
       <%= link_to raw("<i class=\"glyphicon glyphicon-trash\"></i>"), animal_path(@animal), :method => :delete, data:{confirm: "Are you sure?"}, :class=>"btn btn-danger" %>
       </small></h1>
+      <hr>
+      <h3><%=@animal.species%> </h3>
+
+
+      <a href=<%=@photo[:url]%>><img src=<%= @photo[:photo] %>></a>
+
       <h2> <%=@animal.desc%></h2>
+      <h4> tags </h4>
+      <hr>
+      <ul>
+        <%  @animal.tags.map do |t| %>
+          <%= link_to t.name, t, :class => "btn btn-info" %>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

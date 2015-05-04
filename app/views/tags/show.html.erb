@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> <%=@tag.name%></h1>
+      <ul>
+        <% @animal.each do |a| %>
+        <li>
+        <%= link_to a.name, a %>
+        </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>

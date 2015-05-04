@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Make a new tag! How could you describe you've found under a log?</h1>
+      <%= bootstrap_form_for @tag do |f| %>
+      <%= f.text_field :name, :placeholder => 'Enter a tag'%>
+      <%= f.primary %>
+      <% end %>
+    </div>
+  </div>
+</div>
